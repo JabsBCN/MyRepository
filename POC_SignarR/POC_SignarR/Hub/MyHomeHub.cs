@@ -8,6 +8,10 @@
     {
         static ConcurrentDictionary<string, string> conexiones = new ConcurrentDictionary<string, string>();
 
+        /// <summary>
+        /// On connected event.
+        /// </summary>
+        /// <returns></returns>
         public override Task OnConnected()
         {
             return base.OnConnected();
