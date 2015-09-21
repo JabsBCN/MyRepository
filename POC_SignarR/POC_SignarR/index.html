@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>My SignalR chat</title>
+    <link rel="stylesheet" href="css/app.css">
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/jquery.signalR-2.1.2.min.js"></script>
+    <script src="appClient/chatManager.js"></script>
+</head>
+<body>
+    <div class="top-frame">POC SignalR</div>
+    <div class="middle-column">
+        <div id="myContainer" style="min-height: 300px"></div>
+        <input id="idtexto" type="text" placeholder="Escriu el text" />
+        <input id="idboton" type="button" value="Envia >>">
+        <script type="text/javascript">
+            var manager = new ChatManager($('#idtexto'), $('#idboton'), $('#myContainer'));
+            console.log(manager);
+        </script>
+    </div>
+    <div class="bottom-frame"></div>
+</body>
+</html>
