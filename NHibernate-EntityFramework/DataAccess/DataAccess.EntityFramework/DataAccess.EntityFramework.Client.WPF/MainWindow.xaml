@@ -1,0 +1,29 @@
+﻿<Window x:Class="DataAccess.EntityFramework.Client.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="279*"/>
+        </Grid.RowDefinitions>
+        <ComboBox HorizontalAlignment="Left" 
+                  Margin="10,10,0,0" 
+                  VerticalAlignment="Top" 
+                  Width="265" 
+                  ItemsSource="{Binding ChartsOfAccountsView}"
+                  SelectedValuePath="ChartOfAccountsId"
+                  DisplayMemberPath="Description"
+                  SelectedValue="{Binding ChartOfAccountsSelected}" />
+        <DataGrid Margin="10" Grid.Row="1"
+                  ItemsSource="{Binding AccountsView}"
+                  SelectedItem="{Binding AccountSelected}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding AccountNumber}" Header="number" Width="100"/>
+                <DataGridTextColumn Binding="{Binding Description}" Header="number" Width="380"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Button Content="Eliminar" Margin="0,10,10,0" VerticalAlignment="Top" Command="{Binding DeleteAccountCommand}" HorizontalAlignment="Right" Width="75" />
+    </Grid>
+</Window>

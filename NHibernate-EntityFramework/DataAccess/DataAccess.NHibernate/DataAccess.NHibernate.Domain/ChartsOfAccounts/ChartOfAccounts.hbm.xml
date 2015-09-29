@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="DataAccess.NHibernate.Domain"
+                   namespace="DataAccess.NHibernate.Domain.ChartsOfAccounts">
+
+  <class name="ChartOfAccounts" table="ChartOfAccounts">
+    <id name="ChartOfAccountsId" column="ChartOfAccountsId">
+      <generator class="guid" />
+    </id>
+    <property name="Description" column="Description" />
+
+    <!-- One-to-many mapping -->
+    <!--
+    <bag name="Accounts" cascade="all-delete-orphan" lazy="false" >
+      <key column="ChartOfAccountsId"/>
+      <one-to-many class="Account"/>
+    </bag>
+    -->
+  </class>
+</hibernate-mapping>

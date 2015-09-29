@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="DataAccess.NHibernate.Domain"
+                   namespace="DataAccess.NHibernate.Domain.ChartsOfAccounts">
+
+  <class name="Account" table="Accounts">
+    <id name="AccountId" column="AccountId">
+      <generator class="guid" />
+    </id>
+    <property name="ChartOfAccountsId" column="ChartOfAccountsId" />
+    <property name="AccountNumber" column="AccountNumber" />
+    <property name="Description" column="Description" />
+  </class>
+
+</hibernate-mapping>
