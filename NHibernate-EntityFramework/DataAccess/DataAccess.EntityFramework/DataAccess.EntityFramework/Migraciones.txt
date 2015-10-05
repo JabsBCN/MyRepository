@@ -1,8 +1,0 @@
-﻿Ejecutar el siguiente comando en la consola de Nugget Packages para habilitar migraciones del proyecto
-Enable-Migrations -ContextProjectName DataAccess.EntityFramework -ContextTypeName DataAccess.EntityFramework.ChartsOfAccounts.ChartsOfAccountsContext -ProjectName DataAccess.EntityFramework -StartUpProject DataAccess.EntityFramework.Client.WPF
-
-Ejecutar el siguiente comando en la consola de Nugget Packages para agregar la primera migración
-Add-Migration -Name FirstMigration -ProjectName DataAccess.EntityFramework
-
-Actualizar la base de datos
-Update-Database -ProjectName DataAccess.EntityFramework -TargetMigration FirstMigration
