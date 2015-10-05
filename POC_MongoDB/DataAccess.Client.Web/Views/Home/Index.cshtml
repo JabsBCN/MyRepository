@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Artists</h2>
+<div ng-controller="ArtistsController">
+    <table id="tblList" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Style</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="artist in artists">
+                <td>{{artist.name}}</td>
+                <td>{{artist.style}}</td>
+                <td>{{artist.year}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+

@@ -1,0 +1,28 @@
+﻿<Window x:Class="DataAccess.Client.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataAccess.Client.WPF"
+        mc:Ignorable="d"
+        Title="Artists Relation" Height="350" Width="525">
+    <Window.Resources>
+        <CollectionViewSource x:Key="ItemCollectionViewSource"  CollectionViewType="ListCollectionView"/>
+    </Window.Resources>
+    <Grid Name="ArtistsGrid" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="279*"/>
+        </Grid.RowDefinitions>
+        <DataGrid ItemsSource="{Binding}"
+                  DataContext="{StaticResource ItemCollectionViewSource}"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=name}" Header="Name" Width="300" FontWeight="Bold"/>
+                <DataGridTextColumn Binding="{Binding Path=style}" Header="Style" Width="120"/>
+                <DataGridTextColumn Binding="{Binding Path=year}" Header="Year" Width="80"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

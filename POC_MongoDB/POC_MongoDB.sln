@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess.Client.WPF", "DataAccess.MongoDB.Client.WPF\DataAccess.Client.WPF.csproj", "{4B613977-AAA6-46C2-AE71-F52C2F61E1AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess.Mongo.BackEnd", "DataAccess.Mongo.Console\DataAccess.Mongo.BackEnd.csproj", "{7B9B88F2-AB83-4A3F-BF6C-C0D8ADB0E16A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess.Client.Web", "DataAccess.Client.Web\DataAccess.Client.Web.csproj", "{3B8DC08F-DA95-4F4E-807B-0B7F50BCED72}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B613977-AAA6-46C2-AE71-F52C2F61E1AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B613977-AAA6-46C2-AE71-F52C2F61E1AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B613977-AAA6-46C2-AE71-F52C2F61E1AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B613977-AAA6-46C2-AE71-F52C2F61E1AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B9B88F2-AB83-4A3F-BF6C-C0D8ADB0E16A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B9B88F2-AB83-4A3F-BF6C-C0D8ADB0E16A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B9B88F2-AB83-4A3F-BF6C-C0D8ADB0E16A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B9B88F2-AB83-4A3F-BF6C-C0D8ADB0E16A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B8DC08F-DA95-4F4E-807B-0B7F50BCED72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B8DC08F-DA95-4F4E-807B-0B7F50BCED72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B8DC08F-DA95-4F4E-807B-0B7F50BCED72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B8DC08F-DA95-4F4E-807B-0B7F50BCED72}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
