@@ -11,9 +11,9 @@
         {
             Dictionary<int, string> registredAccountList = GetSampleData();
 
-            var activeAccountsIds = GetActiveAccountsIds(registredAccountList);
+            var activeAccountsIdList = GetActiveAccountsIds(registredAccountList);
 
-            foreach (int activeAccountId in activeAccountsIds)
+            foreach (int activeAccountId in activeAccountsIdList)
             {
                 Console.WriteLine("Cuenta: {0} - Activa", activeAccountId);
             }
