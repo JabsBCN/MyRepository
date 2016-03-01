@@ -36,13 +36,14 @@
 
         private static Dictionary<int, string> GetSampleData()
         {
-            Dictionary<int, string> sampleAccountsDictionary = new Dictionary<int, string>();
-
-            sampleAccountsDictionary.Add(1, Enum.GetName(typeof(AccountState), AccountState.Blocked));
-            sampleAccountsDictionary.Add(2, Enum.GetName(typeof(AccountState), AccountState.Erased));
-            sampleAccountsDictionary.Add(3, Enum.GetName(typeof(AccountState), AccountState.Active));
-            sampleAccountsDictionary.Add(4, Enum.GetName(typeof(AccountState), AccountState.Inactive));
-            sampleAccountsDictionary.Add(5, Enum.GetName(typeof(AccountState), AccountState.Active));
+            Dictionary<int, string> sampleAccountsDictionary = new Dictionary<int, string>
+            {
+                { 1, Enum.GetName(typeof(AccountState), AccountState.Blocked) },
+                { 2, Enum.GetName(typeof(AccountState), AccountState.Erased) },
+                { 3, Enum.GetName(typeof(AccountState), AccountState.Active) },
+                { 4, Enum.GetName(typeof(AccountState), AccountState.Inactive) },
+                { 5, Enum.GetName(typeof(AccountState), AccountState.Active) }
+            };
 
             return sampleAccountsDictionary;
         }
