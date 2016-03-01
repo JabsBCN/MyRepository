@@ -34,13 +34,14 @@
 
         private static Dictionary<int, string> GetSampleData()
         {
-            Dictionary<int, string> list = new Dictionary<int, string>();
-
-            list.Add(1, "3");
-            list.Add(2, "4");
-            list.Add(3, "1");
-            list.Add(4, "2");
-            list.Add(5, "1");
+            Dictionary<int, string> list = new Dictionary<int, string>
+            {
+                { 1, "3" },
+                { 2, "4" },
+                { 3, "1" },
+                { 4, "2" },
+                { 5, "1" }
+            };
 
             return list;
         }
