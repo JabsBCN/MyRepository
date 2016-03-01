@@ -19,11 +19,11 @@
             }
         }
 
-        public static IEnumerable<int> GetActiveAccountsIds(Dictionary<int, string> registredAccountsList)
+        public static IEnumerable<int> GetActiveAccountsIds(Dictionary<int, string> registredAccountsDictionary)
         {
             var activedAccountsList = new List<int>();
 
-            foreach (var x in registredAccountsList)
+            foreach (var x in registredAccountsDictionary)
             {
                 if (x.Value == Enum.GetName(typeof(AccountState), AccountState.Active))
                 {
@@ -36,15 +36,15 @@
 
         private static Dictionary<int, string> GetSampleData()
         {
-            Dictionary<int, string> accountListMocked = new Dictionary<int, string>();
+            Dictionary<int, string> sampleAccountsDictionary = new Dictionary<int, string>();
 
-            accountListMocked.Add(1, Enum.GetName(typeof(AccountState), AccountState.Blocked));
-            accountListMocked.Add(2, Enum.GetName(typeof(AccountState), AccountState.Erased));
-            accountListMocked.Add(3, Enum.GetName(typeof(AccountState), AccountState.Active));
-            accountListMocked.Add(4, Enum.GetName(typeof(AccountState), AccountState.Inactive));
-            accountListMocked.Add(5, Enum.GetName(typeof(AccountState), AccountState.Active));
+            sampleAccountsDictionary.Add(1, Enum.GetName(typeof(AccountState), AccountState.Blocked));
+            sampleAccountsDictionary.Add(2, Enum.GetName(typeof(AccountState), AccountState.Erased));
+            sampleAccountsDictionary.Add(3, Enum.GetName(typeof(AccountState), AccountState.Active));
+            sampleAccountsDictionary.Add(4, Enum.GetName(typeof(AccountState), AccountState.Inactive));
+            sampleAccountsDictionary.Add(5, Enum.GetName(typeof(AccountState), AccountState.Active));
 
-            return accountListMocked;
+            return sampleAccountsDictionary;
         }
     }
 }
