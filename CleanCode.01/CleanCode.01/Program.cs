@@ -9,25 +9,25 @@
 
         static void Main(string[] args)
         {
-            Dictionary<int, string> registredAccountList = GetSampleData();
+            Dictionary<int, string> registredAccounts = GetSampleData();
 
-            var activeAccountsIdList = GetActiveAccountsIds(registredAccountList);
+            IEnumerable<int> activeAccountsIds = GetActiveAccountsIds(registredAccounts);
 
-            foreach (int activeAccountId in activeAccountsIdList)
+            foreach (int activeAccountId in activeAccountsIds)
             {
                 Console.WriteLine("Cuenta: {0} - Activa", activeAccountId);
             }
         }
 
-        public static IEnumerable<int> GetActiveAccountsIds(Dictionary<int, string> registredAccountsDictionary)
+        public static IEnumerable<int> GetActiveAccountsIds(Dictionary<int, string> registeredAccounts)
         {
             var activedAccountsList = new List<int>();
 
-            foreach (var x in registredAccountsDictionary)
+            foreach (var registeredAccount in registeredAccounts)
             {
-                if (x.Value == Enum.GetName(typeof(AccountState), AccountState.Active))
+                if (registeredAccount.Value == Enum.GetName(typeof(AccountState), AccountState.Active))
                 {
-                    activedAccountsList.Add(x.Key);
+                    activedAccountsList.Add(registeredAccount.Key);
                 }
             }
 
