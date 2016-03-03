@@ -16,7 +16,7 @@
             foreach (int activeAccountId in activeAccountsIds)
             {
                 Console.WriteLine("Cuenta: {0} - Activa", activeAccountId);
-            }
+        }
         }
 
         public static IEnumerable<int> GetActiveAccountsIds(Dictionary<int, string> registeredAccounts)
@@ -29,10 +29,10 @@
                 {
                     activedAccountsList.Add(registeredAccount.Key);
                 }
-            }
+                }
 
             return activedAccountsList;
-        }
+            }
 
         private static Dictionary<int, string> GetSampleData()
         {
