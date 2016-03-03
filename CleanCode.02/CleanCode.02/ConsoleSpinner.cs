@@ -1,20 +1,19 @@
-namespace CleanCode._02.FilePath
+namespace CleanCode.FileManteneinance
 {
     using System;
     using System.Threading;
-
-
+    
     public class ConsoleSpinner
     {
-        int _counter;
+        int processCounter;
         public ConsoleSpinner()
         {
-            _counter = 0;
+            processCounter = 0;
         }
         public void Turn()
         {
-            _counter++;
-            switch (_counter % 4)
+            processCounter++;
+            switch (processCounter % 4)
             {
                 case 0: Console.Write("/"); break;
                 case 1: Console.Write("-"); break;

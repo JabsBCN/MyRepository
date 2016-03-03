@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChkFolderLng.cs" />
+    <Compile Include="FilePathShortener.cs" />
     <Compile Include="ConsoleSpinner.cs" />
+    <Compile Include="FoldersRenamer.cs" />
+    <Compile Include="FoldersRemover.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

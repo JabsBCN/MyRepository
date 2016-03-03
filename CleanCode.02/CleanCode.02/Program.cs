@@ -1,14 +1,12 @@
-﻿using System.Runtime.InteropServices;
-
-namespace CleanCode._02
+﻿namespace CleanCode.FileManteneinance
 {
-    using FilePath;
-
     internal static class Program
     {
+
         static void Main(string[] args)
         {
-            ChkFolderLng.Execute();
+            var filePathShortered = new FilePathShortener();
+            filePathShortered.ShortenFilePaths();
         }
     }
 }
