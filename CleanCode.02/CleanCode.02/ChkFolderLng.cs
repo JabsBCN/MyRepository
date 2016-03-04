@@ -29,7 +29,7 @@
 
             try
             {
-                var pathArrayLst = RenameDirectories(strArrayList);
+                var pathArrayLst = RenameFolders(strArrayList);
                 Console.WriteLine($"Success! Directories: {counter1 + counter2}");
                 Console.WriteLine("Directories Renamed: " + counter1);
                 Console.WriteLine("Directories not renamed: " + counter2);
@@ -60,64 +60,64 @@
             Console.ReadLine();
         }
 
-        private static string[] RenameDirectories(string[] pathsList)
+        private static string[] RenameFolders(string[] pathsList)
         {
             var newPaths = new string[pathsList.Length];
             for (var i = 0; i < pathsList.Length; i++)
             {
-                newPaths[i] = RenameDirectory(pathsList[i]);
+                newPaths[i] = RenameFolder(pathsList[i]);
             }
             return newPaths;
         }
 
-        private static string RenameDirectory(string directoryPath)
+        private static string RenameFolder(string path)
         {
-            if (string.IsNullOrEmpty(directoryPath))
+            if (string.IsNullOrEmpty(path))
             {
                 throw new Exception("A directory has to be specified.");
             }
 
-            var attr = File.GetAttributes(directoryPath);
+            var attr = File.GetAttributes(path);
             if (!attr.HasFlag(FileAttributes.Directory))
             {
                 throw new Exception("The specified path is a file.");
             }
 
-            var directoryInfo = new DirectoryInfo(directoryPath);
+            var folder = new DirectoryInfo(path);
 
-            if (!directoryInfo.Exists)
+            if (!folder.Exists)
             {
                 throw new Exception("The directory doesn't exist.");
             }
 
-            if (directoryInfo.Parent != null)
+            if (folder.Parent != null)
             {
-                var moveTo = directoryInfo.Parent.FullName.TrimEnd('\\') + "\\" + "_" + counter1;
+                var moveTo = folder.Parent.FullName.TrimEnd('\\') + "\\" + "_" + counter1;
                 if (!Directory.Exists(moveTo))
                 {
-                    directoryInfo.MoveTo(moveTo);
+                    folder.MoveTo(moveTo);
                     counter1++;
                 }
                 else
                 {
-                    if (moveTo != directoryInfo.FullName)
+                    if (moveTo != folder.FullName)
                     {
                         Console.WriteLine(
                             "The following directory was not renamed because a conflict would have been caused:");
-                        Console.WriteLine(directoryInfo.FullName);
+                        Console.WriteLine(folder.FullName);
                     }
 
                     counter2++;
                 }
             }
 
-            var subdirectoriesList = Directory.GetDirectories(directoryInfo.FullName);
+            var subdirectoriesList = Directory.GetDirectories(folder.FullName);
             foreach (var subdirectory in subdirectoriesList)
             {
-                RenameDirectory(subdirectory);
+                RenameFolder(subdirectory);
             }
 
-            return directoryInfo.FullName;
+            return folder.FullName;
         }
 
         private static void RemoveDirectories(string[] pathsList)
